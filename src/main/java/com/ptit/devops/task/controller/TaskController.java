@@ -19,7 +19,6 @@ public class TaskController {
         this.repository = repository;
     }
 
-    /** GET /api/tasks - danh sách công việc */
     @GetMapping("/tasks")
     public List<Task> findAll() {
         return repository.findAll(Sort.by("id"));
